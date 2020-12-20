@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popularity based recommender system</title>
+</head>
+<body>
+<h1 align="center">Popularity Based Movie Recommendation System</h1>
+<p align="center">This system gives recommendation based on <b><a href="https://grouplens.org/datasets/movielens/100k/"> MovieLens dataset</a></b></p>
+<h3>Info</h3>
+<p><b>Recommendation Systems:</b> Helps finding content which is relevant to the User from a large pool of diverse contents.</p>
+In this project, we are going to recommend movies to the user based on Popularity: <br>
+  1. Most Popular Movies (Most rated movies of all time) <br>
+  2. Highly Rated Movies (Most rated movies having very high ratings)
+<br>
+<h3>Most Popular Movies</h3>
+<font size="3">
+<table border="2" class="dataframe">
+  <tbody>
+    <tr>
+      <th>Movie Title</th>
+        {% for movie in most_popular: %}
+      <td>{{movie}}</td>
+      {% endfor %}
+    </tr>
+  </tbody>
+</table>
+</font>
+<br>
+<h3>Highly Rated Movies</h3>
+<font size="3">
+<table border="2" class="dataframe">
+  <tbody>
+    <tr>
+      <th>Movie Title</th>
+        {% for movie in highly_rated: %}
+      <td>{{movie}}</td>
+      {% endfor %}
+    </tr>
+  </tbody>
+</table>
+</font>
+</body>
+</html>
